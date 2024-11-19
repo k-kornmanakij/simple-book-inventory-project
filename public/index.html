@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Book Inventory System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Book Inventory System</h1>
+    <div id="book-list">
+        <h2>Book list</h2>
+        <button onclick="fetchBooks()">Refresh Book List</button>
+        <table id="books">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Publication Date (YYYY-MM-DD)</th>
+                    <th>ISBN</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div id="add-book">
+        <h2>Add a New Book</h2>
+        <form id="addBookForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="text" id="genre" placeholder="Genre">
+            <input type="date" id="publication_date">
+            <input type="text" id="isbn" placeholder="ISBN" required>
+            <button type="submit">Add Book</button>
+            <button type="button" id="clearFormButton">Clear</button>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
